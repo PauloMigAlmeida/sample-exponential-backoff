@@ -37,7 +37,6 @@ Reporting an issue/ Submiting a feature
 
     * Java version
     * Operational System
-    * AWS region
     * Optionally of the other dependencies involved
 
   * If possible, create a pull request with a (failing) test case demonstrating
