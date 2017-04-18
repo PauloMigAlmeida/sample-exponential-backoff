@@ -4,7 +4,7 @@
 Numerous components on a network, such as DNS servers, switches, load balancers, and others can generate errors anywhere in the life of a given request. The usual technique for dealing with these error responses in a networked environment is to implement retries in the client application. This technique increases the reliability of the application and reduces operational costs for the developer. 
 
 ## What is the goal of this sample?
-The idea behind this source code is to provide a working example of how you can implement this technique in your projects to increase the reliability of your distributed systems. Technically speaking, all SDKs should have this implemented by default, however, that's quite far from the reality.
+The idea behind this sample is to provide a working example of how you can implement this technique in your projects to increase the reliability of your distributed systems. Technically speaking, all SDKs should have this implemented by default, however, that's quite far from the reality.
 
 ## Output
 ```{Shell}
