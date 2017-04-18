@@ -46,6 +46,6 @@ Process finished with exit code 0
 
 ## Contributing 
 
-You're encouraged to contribute to nfscan. Fork the code from https://github.com/PauloMigAlmeida/sample-exponential-backoff and submit pull requests.
+You're encouraged to contribute to sample-exponential-backoff. Fork the code from https://github.com/PauloMigAlmeida/sample-exponential-backoff and submit pull requests.
 
 Make sure you're following the [contributing guidelines](https://github.com/PauloMigAlmeida/sample-exponential-backoff/blob/master/CONTRIBUTING.md) for this project.
