@@ -30,11 +30,16 @@ import com.github.paulomigalmeida.policy.ExceededNumberOfRetriesException;
 import java.util.logging.Logger;
 
 /**
+ * CLass used to initialize the program
+ *
  * Created by Paulo Miguel Almeida - @PauloMigAlmeida on 4/16/2017.
  */
 
 public class Main {
 
+    /**
+     * reference to Logger instance
+     */
     private static final Logger logger = Logger.getLogger(Main.class.getSimpleName());
 
     public static void main(String[] args) {

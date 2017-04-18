@@ -25,17 +25,22 @@
 package com.github.paulomigalmeida.policy;
 
 /**
+ * Exception class used when the program has exceeded the amount of attempts specific in the operation's parameters
+ *
  * Created by Paulo Miguel Almeida - @PauloMigAlmeida on 4/16/2017.
  */
 public class ExceededNumberOfRetriesException extends Exception {
 
+    /**
+     * constant message
+     */
     private static final String message = "Number of retries has exceeded the established value";
 
+    /**
+     * Default constructor
+     */
     public ExceededNumberOfRetriesException() {
         super(message);
     }
 
-    public ExceededNumberOfRetriesException(Throwable cause) {
-        super(message, cause);
-    }
 }

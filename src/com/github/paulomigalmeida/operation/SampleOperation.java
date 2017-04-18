@@ -31,23 +31,46 @@ import java.util.Random;
 import java.util.logging.Logger;
 
 /**
+ * Class used to demonstrate the usage of RetryPolicy
+ *
  * Created by Paulo Miguel Almeida - @PauloMigAlmeida on 4/16/2017.
  */
 public class SampleOperation {
 
+    /**
+     * reference to Logger instance
+     */
     private Logger logger = Logger.getLogger(this.getClass().getSimpleName());
+
+    /**
+     * reference to RetryPolicy instance
+     */
     private RetryPolicy retryPolicy;
-    private Random random = new Random();
+
+    /**
+     * instance variable used to determine in which attempt the operation is going to succeed.
+     */
     private int whichRetryIsThisGonnaWork;
 
+    /**
+     * Default constructor
+     * @param maxNumberOfRetries - the maximum amount of attempts this program may try.
+     */
     public SampleOperation(int maxNumberOfRetries) {
         this.retryPolicy = new RetryPolicy(maxNumberOfRetries);
-        this.whichRetryIsThisGonnaWork = random.nextInt(maxNumberOfRetries - 1) + 2;
+        this.whichRetryIsThisGonnaWork = new Random().nextInt(maxNumberOfRetries - 1) + 2;
         this.logger.info(String.format("Max number of retries is: %d " +
                 "and the sample operation is going to succeed on the attempt: %d",
                 maxNumberOfRetries, whichRetryIsThisGonnaWork));
     }
 
+    /**
+     * Method used to perform the operation that implements the exponential-backoff algorithm
+     * @throws ExceededNumberOfRetriesException - The number of attempts have exceeded that maximum number specified
+     * in the constructor
+     * @throws InterruptedException - The Thread.sleep method couldn't finish its execution for any reason listed in
+     * the official JDK documentation
+     */
     public void performOperation() throws ExceededNumberOfRetriesException, InterruptedException {
         int attemptNumber = 1;
         do{
